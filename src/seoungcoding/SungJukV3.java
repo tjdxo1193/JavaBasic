@@ -1,4 +1,5 @@
 package seoungcoding;
+import javax.swing.*;
 import java.util.Scanner;
 /**
  * 파일명: SungJukV1
@@ -45,14 +46,24 @@ public class SungJukV3 {
             Scanner sc = new Scanner(System.in);
             System.out.println(i + "번째 학생 성적 입력중....");
             System.out.print("이름 입력하시오 :");
-            name[i-1] = sc.next();
+            name[i-1] = sc.nextLine();
             System.out.print("국어점수를 입력하시오 :");
-            kor[i-1] = sc.nextInt();
+            kor[i-1] = Integer.parseInt(sc.nextLine());
             System.out.print("영어점수를 입력하시오 :");
-            eng[i-1] = sc.nextInt();
+            eng[i-1] = Integer.parseInt(sc.nextLine());
             System.out.print("수학점수를 입력하시오 :");
-            mat[i-1] = sc.nextInt();
+            mat[i-1] = Integer.parseInt(sc.nextLine());
+
+            //sc.skip("\r\n|[\n\r]");
+            //수학성적 입력시 같이 입력된 enter키가
+            //다음 데이터(이름) 입력시 입력값으로
+            //자동으로 전달됨
+            //그러한 상황을 해결하기 위해
+            //미리 엔터키를 제거하는 코드 삽입
+            //next보다는 nextLine 쓰되 skip 넣어주기
+            //next는 단어만 입력 가능, 띄어쓰기 불가
         }
+
         for(int j= 0;j < 3; j++) {
             sum[j] = kor[j] + eng[j] + mat[j];
             mean[j] = sum[j] / 3.0;
