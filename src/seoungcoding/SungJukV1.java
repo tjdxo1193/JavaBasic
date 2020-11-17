@@ -13,22 +13,31 @@ import java.util.Scanner;
  * 학점 기준은 수우미양가로 함
  * 만점은 100점
  * 100~90, 89~80, 79~70, 69~60, 59~0 기준으로 학점 부여
+ * 삼항 연산자
  */
 public class SungJukV1 {
-    static String NAME = "신화섭";
-    static String NAME1 = "황성태";
+    static String NAME1 = "신화섭";
+    static String NAME2 = "황성태";
     public static void main(String[] args) {
 
-        Sung_JukV1(NAME, 99, 98, 99);
-        Sung_JukV1(NAME1, 58, 88, 48);
+        Sung_JukV1(NAME1, 99, 98, 99);
+        Sung_JukV1(NAME2, 58, 88, 48);
     }
     public static void Sung_JukV1(String name, int kor, int eng, int mat){
+        //변수선언
         int sum = 0;
         double mean = 0.0;
         char grd = '가';
 
+        //처리
         sum = (kor + eng + mat);
-        mean = sum/3.0;
+        mean = sum / 3.0;
+        grd = (mean >=90) ? '수':
+                (mean >= 80) ? '우':
+                        (mean >= 70) ? '미':
+                                (mean >= 60) ? '양': '가';
+
+        //결과출력
         System.out.println("이름 : " + name);
         System.out.println("국어 : " + kor);
         System.out.println("영어 : " + eng);
@@ -36,11 +45,6 @@ public class SungJukV1 {
         System.out.println("----------");
         System.out.println("총점 : " + sum );
         System.out.println("평균 : " + mean );
-        grd = ((mean <=100)&&(mean >=90)) ?
-                '수':((mean <=89)&&(mean >= 80)) ?
-                '우' : ((mean <=79)&&(mean >= 70)) ?
-                '미': ((mean <=69)&&(mean >= 60)) ?
-                '양' :'가';
         System.out.println("학점 : " + grd );
         System.out.println("----------");
     }
