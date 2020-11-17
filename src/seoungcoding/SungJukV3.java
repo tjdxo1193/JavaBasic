@@ -39,7 +39,7 @@ public class SungJukV3 {
         int sum = 0;
         double mean = 0.0;
         char grd = '가';
-        String fmt = "이름 : %s\n국어 : %d\n수학 : %d\n영어 : %d\n총점 : %d\n평균 : %.2f\n학점 : %c";
+        String fmt = "이름 : %s\n국어 : %d\n수학 : %d\n영어 : %d\n총점 : %d\n평균 : %s\n학점 : %c";
         String result;
         //입력
         Scanner sc = new Scanner(System.in);
@@ -74,7 +74,9 @@ public class SungJukV3 {
                 //String.format(형식지정자, 변수들)
             }
             mean = Math.round(mean * 100) / 100.0;
-            result = String.format(fmt, name, kor, eng, mat, sum, mean, grd);
+            result = String.format(fmt, name, kor, eng, mat, sum, String.valueOf(mean), grd);
+            //String.valueOf(값)
+            //숫자를 문자로 변환
 
 
 //            String arr[][] = {{"이름",name},{"국어",Integer.toString(kor)},{"영어",Integer.toString(eng)},{"수학",Integer.toString(mat)},{"총점",Integer.toString(sum)},
