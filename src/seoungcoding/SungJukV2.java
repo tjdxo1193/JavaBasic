@@ -44,7 +44,7 @@ public class SungJukV2 {
         //처리
         sum = (kor + eng + mat);
         mean = sum / 3.0;
-        switch((int) (mean/10)) {
+        switch((int)(mean/10)) {
             case 9:
                 grd = '수';
                 break;
