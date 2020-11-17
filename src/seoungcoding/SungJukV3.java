@@ -26,10 +26,10 @@ import java.util.Scanner;
  *
  */
 public class SungJukV3 {
-    static int N = 0;
     public static void main(String[] args) {
 
         Sung_JukV3();
+
 
 
 
@@ -38,119 +38,49 @@ public class SungJukV3 {
 
         //변수선언
         String name;
-        N += 1;
         int kor,eng,mat;
         int sum = 0;
         double mean = 0.0;
         char grd = '가';
-        String fmt = "-----------\n이름 : %s\n국어 : %d\n수학 : %d\n영어 : %d\n-----------\n총점 : %d\n평균 : %s\n학점 : %c\n-----------\n";
+        String fmt = "-----------\n이름 : %s\n국어 : %d\n수학 : %d\n영어 : %d\n-----------\n총점 : %d\n평균 : %.2f\n학점 : %c\n-----------\n";
         String result;
+        for(int i = 1; i <=3; i++) {
+            //처리
+            Scanner sc = new Scanner(System.in);
+            System.out.println(i + "번째 학생 성적 입력중....");
+            System.out.print("이름 입력하시오 :");
+            name = sc.next();
+            System.out.print("국어점수를 입력하시오 :");
+            kor = sc.nextInt();
+            System.out.print("영어점수를 입력하시오 :");
+            eng = sc.nextInt();
+            System.out.print("수학점수를 입력하시오 :");
+            mat = sc.nextInt();
 
-        //처리
-        Scanner sc = new Scanner(System.in);
+            //
+            sum = kor + eng + mat;
+            mean = sum / 3.0;
+            switch ((int) (mean / 10)) {
+                case 10:
+                case 9:
+                    grd = '수';
+                    break;
+                case 8:
+                    grd = '우';
+                    break;
+                case 7:
+                    grd = '미';
+                    break;
+                case 6:
+                    grd = '양';
+                    break;
+                default:
+                    grd = '가';
+            }
+            ;
+            //결과출력
 
-        System.out.println(N + "번째 학생 성적 입력중....");
-        System.out.print("이름 입력하시오 :" );
-        name = sc.next();
-        System.out.print("국어점수를 입력하시오 :" );
-        kor = sc.nextInt();
-        System.out.print("영어점수를 입력하시오 :" );
-        eng = sc.nextInt();
-        System.out.print("수학점수를 입력하시오 :" );
-        mat = sc.nextInt();
-
-        //
-        sum = kor + eng + mat;
-        mean = sum / 3.0;
-        switch((int)(mean/10)) {
-            case 10:
-            case 9:
-                grd = '수';
-                break;
-            case 8:
-                grd = '우';
-                break;
-            case 7:
-                grd = '미';
-                break;
-            case 6:
-                grd = '양';
-                break;
-            default:
-                grd = '가';
-        };
-        //결과출력
-
-        System.out.printf(fmt, name, kor, eng, mat, sum, mean, grd);
-        N++;
-        System.out.println(N + "번째 학생 성적 입력중....");
-        System.out.print("이름 입력하시오 :" );
-        name = sc.next();
-        System.out.print("국어점수를 입력하시오 :" );
-        kor = sc.nextInt();
-        System.out.print("영어점수를 입력하시오 :" );
-        eng = sc.nextInt();
-        System.out.print("수학점수를 입력하시오 :" );
-        mat = sc.nextInt();
-
-        //
-        sum = kor + eng + mat;
-        mean = sum / 3.0;
-        switch((int)(mean/10)) {
-            case 10:
-            case 9:
-                grd = '수';
-                break;
-            case 8:
-                grd = '우';
-                break;
-            case 7:
-                grd = '미';
-                break;
-            case 6:
-                grd = '양';
-                break;
-            default:
-                grd = '가';
-        };
-        //결과출력
-
-        System.out.printf(fmt, name, kor, eng, mat, sum, mean, grd);
-
-        N++;
-        System.out.println(N + "번째 학생 성적 입력중....");
-        System.out.print("이름 입력하시오 :" );
-        name = sc.next();
-        System.out.print("국어점수를 입력하시오 :" );
-        kor = sc.nextInt();
-        System.out.print("영어점수를 입력하시오 :" );
-        eng = sc.nextInt();
-        System.out.print("수학점수를 입력하시오 :" );
-        mat = sc.nextInt();
-
-        //
-        sum = kor + eng + mat;
-        mean = sum / 3.0;
-        switch((int)(mean/10)) {
-            case 10:
-            case 9:
-                grd = '수';
-                break;
-            case 8:
-                grd = '우';
-                break;
-            case 7:
-                grd = '미';
-                break;
-            case 6:
-                grd = '양';
-                break;
-            default:
-                grd = '가';
-        };
-        //결과출력
-
-        System.out.printf(fmt, name, kor, eng, mat, sum, mean, grd);
-
+            System.out.printf(fmt, name, kor, eng, mat, sum, mean, grd);
+        }
     }
 }
