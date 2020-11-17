@@ -15,8 +15,9 @@ import java.util.Scanner;
  * 100~90, 89~80, 79~70, 69~60, 59~0 기준으로 학점 부여
  */
 public class SungJukV1 {
+    static String NAME = "신화섭";
     public static void main(String[] args) {
-        Sung_JukV1("신화섭", 99, 98, 99);
+        Sung_JukV1(NAME, 99, 98, 99);
     }
     public static void Sung_JukV1(String name, int kor, int eng, int mat){
         int sum;
@@ -24,7 +25,7 @@ public class SungJukV1 {
         char grd;
 
         sum = (kor + eng + mat);
-        mean = (kor + eng + mat)/3;
+        mean = (kor + eng + mat)/3.0;
         System.out.println("이름 : " + name);
         System.out.println("국어 : " + kor);
         System.out.println("영어 : " + eng);
