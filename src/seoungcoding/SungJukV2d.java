@@ -6,8 +6,8 @@ import java.util.Scanner;
  * 파일명: SungJukV1
  * 작성일 : 2020.11.17
  *
- * 프로그램 설명: 성적처리 프로그램 v3
- * 학생 3명의 성적 데이터를 키보드로 입력 받아서
+ * 프로그램 설명: 성적처리 프로그램 v2
+ * 이름, 국어, 영어, 수학 점수를 키보드로 입력 받아
  * 총점, 평균, 학점을 계산하고 결과출력
  *
  * 단, 평균은 소수점 첫째 자리까지 출력하고
@@ -25,30 +25,24 @@ import java.util.Scanner;
  * 평균은 소수점 둘째 자리 까지 끊어서 출력함
  *
  */
-public class SungJukV3 {
-    static int N = 0;
+public class SungJukV2d {
     public static void main(String[] args) {
 
-        Sung_JukV3();
-        Sung_JukV3();
-        Sung_JukV3();
+        Sung_JukV1();
 
     }
-    public static void Sung_JukV3(){
+    public static void Sung_JukV1(){
 
         //변수선언
         String name;
-        N += 1;
         int kor,eng,mat;
         int sum = 0;
         double mean = 0.0;
         char grd = '가';
-        String fmt = "-----------\n이름 : %s\n국어 : %d\n수학 : %d\n영어 : %d\n-----------\n총점 : %d\n평균 : %s\n학점 : %c\n-----------\n";
+        String fmt = "이름 : %s\n국어 : %d\n수학 : %d\n영어 : %d\n총점 : %d\n평균 : %s\n학점 : %c";
         String result;
         //입력
         Scanner sc = new Scanner(System.in);
-
-        System.out.println(N + "번째 학생 성적 입력중....");
         System.out.print("이름 입력하시오 :" );
         name = sc.nextLine();
         System.out.print("국어점수를 입력하시오 :" );
@@ -78,14 +72,30 @@ public class SungJukV3 {
             default:
                 grd = '가';
                 //String.format(형식지정자, 변수들)
-        };
+            }
+            mean = Math.round(mean * 100) / 100.0;
+            result = String.format(fmt, name, kor, eng, mat, sum, String.valueOf(mean), grd);
+            //String.valueOf(값)
+            //숫자를 문자로 변환
 
-        mean = Math.round(mean * 100) / 100.0;
-        result = String.format(fmt, name, kor, eng, mat, sum, String.valueOf(mean), grd);
-        //String.valueOf(값)
-        //숫자를 문자로 변환
 
-        //결과 출력
+//            String arr[][] = {{"이름",name},{"국어",Integer.toString(kor)},{"영어",Integer.toString(eng)},{"수학",Integer.toString(mat)},{"총점",Integer.toString(sum)},
+//                    {"평균",Double.toString(mean)},{"학점",Integer.toString(grd)}};
+//
+//            //결과출력
+//            for(int i = 0; i <6; i++ ) {
+//                System.out.println(arr[i][0]+ " : " +arr[i][1]);
+//        }
+
+//              System.out.println("이름 : " + name +
+//                      "\n국어 : " + kor +
+//                      "\n영어 : " + eng +
+//                      "\n수학 : " + mat +
+//                      "\n----------" +
+//                      "\n총점 : " + sum +
+//                      "\n평균 : " + mean +
+//                      "\n학점 : " + grd +
+//                      "\n----------");
         //문자열 연결 연산자로(+) 문장을 만드는 경우
         //String 변수의_특성때문에 성능저하 발생
         System.out.println(result);
