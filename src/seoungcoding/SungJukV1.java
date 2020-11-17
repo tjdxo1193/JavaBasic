@@ -16,16 +16,19 @@ import java.util.Scanner;
  */
 public class SungJukV1 {
     static String NAME = "신화섭";
+    static String NAME1 = "황성태";
     public static void main(String[] args) {
+
         Sung_JukV1(NAME, 99, 98, 99);
+        Sung_JukV1(NAME1, 58, 88, 48);
     }
     public static void Sung_JukV1(String name, int kor, int eng, int mat){
-        int sum;
-        double mean;
-        char grd;
+        int sum = 0;
+        double mean = 0.0;
+        char grd = '가';
 
         sum = (kor + eng + mat);
-        mean = (kor + eng + mat)/3.0;
+        mean = sum/3.0;
         System.out.println("이름 : " + name);
         System.out.println("국어 : " + kor);
         System.out.println("영어 : " + eng);
@@ -39,5 +42,6 @@ public class SungJukV1 {
                 '미': ((mean <=69)&&(mean >= 60)) ?
                 '양' :'가';
         System.out.println("학점 : " + grd );
+        System.out.println("----------");
     }
 }
