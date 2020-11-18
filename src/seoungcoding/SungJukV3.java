@@ -2,7 +2,7 @@ package seoungcoding;
 import javax.swing.*;
 import java.util.Scanner;
 /**
- * 파일명: SungJukV1
+ * 파일명: SungJukV3
  * 작성일 : 2020.11.17
  *
  * 프로그램 설명: 성적처리 프로그램 v3

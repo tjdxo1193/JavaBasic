@@ -45,7 +45,7 @@ public class Method {
         //             메소드 (구현 부)
         // }
         sayHello2("Hello, Java!!");
-        System.out.println(computeAllSum(1, 5));
+        computeAllSum(1, 5);
     }
     // 간단한 생산
     // public : 접근 제 한자, 외부 클래스의 메소드 사용 허가 여부
@@ -87,17 +87,34 @@ public class Method {
         System.out.println(f+" * "+ s + " = " +mul);
         System.out.println(f+" / "+ s + " = " +div);
     }
-    public static int computeAllSum(int s, int e){
+    public static void computeAllSum(int s, int e){
         int min;
         int max;
         min = s;
         max = e;
+        String fmt = "%d ~ %d 정수 범위 총합 : %d";
         if(s > e){min = e; max = s;}
         int Sum= 0;
         for(int i = min; i <= max ;++i){
             Sum += i;
         }
-        return Sum;
+        System.out.printf(fmt, min, max, Sum);
+    }
+
+    public static void computeAllSum2(int s, int e){
+        int min;
+        int max;
+        min = s;
+        max = e;
+        String fmt = "%d ~ %d 정수 범위 총합 : %d";
+        if(s > e){min = e; max = s;}
+        if(s != 1){
+            int Sum = (s*(s+1)/2) - (e*(e+1) / 2);
+        }
+        int Sum= e*(e+1) / 2;
+
+
+        System.out.printf(fmt, min, max, Sum);
 
     }
 
