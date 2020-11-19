@@ -51,19 +51,19 @@ public class EX01 {
         zeon.Dep_name= "의상디자인";
         zeon.professorNum = 445;
 
-        kim.studentNum = 201351010;
-        kim.name = "수지";
-        kim.adress = "서울성북구";
-        kim.birth= "1988.7.13";
-        kim.Dep_name= "식품영양";
-        kim.professorNum = 556;
+        su.studentNum = 201351010;
+        su.name = "수지";
+        su.adress = "서울성북구";
+        su.birth= "1988.7.13";
+        su.Dep_name= "식품영양";
+        su.professorNum = 556;
 
-        kim.studentNum = 201353011;
-        kim.name = "아이유";
-        kim.adress = "경기도천안시";
-        kim.birth= "1987.2.25";
-        kim.Dep_name= "철학";
-        kim.professorNum = 504;
+        ai.studentNum = 201353011;
+        ai.name = "아이유";
+        ai.adress = "경기도천안시";
+        ai.birth= "1987.2.25";
+        ai.Dep_name= "철학";
+        ai.professorNum = 504;
 
         com.dep_name = "컴퓨터공학";
         com.phoneNum = "123-4567-8901";
@@ -122,7 +122,30 @@ public class EX01 {
         sung.majorField = "철학";
 
         //객체에 저장된 값 출력
+        System.out.println("학생 클래스");
+        System.out.println("============\n"+ "학번 :" + kim.studentNum + "\n"+"이름 :" + kim.name + "\n"+"주소 :" + kim.adress + "\n"+"생년월일 :" + kim.birth + "\n"+"학과명 :" + kim.Dep_name + "\n"+"교수 :" + kim.professorNum);
+        System.out.println("============\n"+ "학번 :" + song.studentNum + "\n"+"이름 :" + song.name + "\n"+"주소 :" + song.adress + "\n"+"생년월일 :" + song.birth + "\n"+"학과명 :" + song.Dep_name + "\n"+"교수 :" + song.professorNum);
+        System.out.println("============\n"+ "학번 :" + zeon.studentNum + "\n"+"이름 :" + zeon.name + "\n"+"주소 :" + zeon.adress + "\n"+"생년월일 :" + zeon.birth + "\n"+"학과명 :" + zeon.Dep_name + "\n"+"교수 :" + zeon.professorNum);
+        System.out.println("============\n"+ "학번 :" + su.studentNum + "\n"+"이름 :" + su.name + "\n"+"주소 :" + su.adress + "\n"+"생년월일 :" + su.birth + "\n"+"학과명 :" + su.Dep_name + "\n"+"교수 :" + su.professorNum);
+        System.out.println("============\n"+ "학번 :" + ai.studentNum + "\n"+"이름 :" + ai.name + "\n"+"주소 :" + ai.adress + "\n"+"생년월일 :" + ai.birth + "\n"+"학과명 :" + ai.Dep_name + "\n"+"교수 :" + ai.professorNum);
 
+        System.out.println("학과 클래스");
+        System.out.println("============\n"+ "학과명 :" + com.dep_name + "\n"+ "전화번호 :" + com.phoneNum + "\n"+ "사무실 위치 :" + com.location + "\n"+ "학과장 :" + com.dep_HeadNum);
+        System.out.println("============\n"+ "학과명 :" + clo.dep_name + "\n"+ "전화번호 :" + clo.phoneNum + "\n"+ "사무실 위치 :" + clo.location + "\n"+ "학과장 :" + clo.dep_HeadNum);
+        System.out.println("============\n"+ "학과명 :" + food.dep_name + "\n"+ "전화번호 :" + food.phoneNum + "\n"+ "사무실 위치 :" + food.location + "\n"+ "학과장 :" + food.dep_HeadNum);
+        System.out.println("============\n"+ "학과명 :" + phil.dep_name + "\n"+ "전화번호 :" + phil.phoneNum + "\n"+ "사무실 위치 :" + phil.location + "\n"+ "학과장 :" + phil.dep_HeadNum);
+
+        System.out.println("과목 클래스");
+        System.out.println("============\n"+ "과목번호 :" + prog.sub_Num + "\n"+ "과목명 :" + prog.Sub_Name + "\n"+ "과목개요 :" + prog.sub_Summary + "\n"+ "담당교수 :" + prog.professorNum);
+        System.out.println("============\n"+ "과목번호 :" + dress.sub_Num + "\n"+ "과목명 :" + dress.Sub_Name + "\n"+ "과목개요 :" + dress.sub_Summary + "\n"+ "담당교수 :" + dress.professorNum);
+        System.out.println("============\n"+ "과목번호 :" + life.sub_Num + "\n"+ "과목명 :" + life.Sub_Name + "\n"+ "과목개요 :" + life.sub_Summary + "\n"+ "담당교수 :" + life.professorNum);
+        System.out.println("============\n"+ "과목번호 :" + devil.sub_Num + "\n"+ "과목명 :" + devil.Sub_Name + "\n"+ "과목개요 :" + devil.sub_Summary + "\n"+ "담당교수 :" + devil.professorNum);
+
+        System.out.println("교수 클래스");
+        System.out.println("============\n"+ "교수번호 :" + lee.professorNum + "\n"+ "이름 :" + lee.name + "\n"+ "전공분야 :" + lee.majorField);
+        System.out.println("============\n"+ "교수번호 :" + jung.professorNum + "\n"+ "이름 :" + jung.name + "\n"+ "전공분야 :" + jung.majorField);
+        System.out.println("============\n"+ "교수번호 :" + yusin.professorNum + "\n"+ "이름 :" + yusin.name + "\n"+ "전공분야 :" + yusin.majorField);
+        System.out.println("============\n"+ "교수번호 :" + sung.professorNum + "\n"+ "이름 :" + sung.name + "\n"+ "전공분야 :" + sung.majorField);
 
 
     }
