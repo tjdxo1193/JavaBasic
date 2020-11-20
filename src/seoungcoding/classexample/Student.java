@@ -1,4 +1,4 @@
-package seoungcoding;
+package seoungcoding.classexample;
 
 public class Student {
     int studentNum;

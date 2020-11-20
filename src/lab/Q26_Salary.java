@@ -10,6 +10,8 @@ import java.util.Scanner;
 //        나. 결혼한 경우 : 연봉 6000미만 - 15%,  연봉 6000이상 - 35%
 public class Q26_Salary {
     public static void main(String[] args) {
+
+
         Tax();
     }
     public static void Tax(){
@@ -39,5 +41,7 @@ public class Q26_Salary {
         System.out.println("내실 세금: " + tax);
 
     }
+
+
 
 }

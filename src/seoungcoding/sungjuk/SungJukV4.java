@@ -1,4 +1,4 @@
-package seoungcoding;
+package seoungcoding.sungjuk;
 import java.util.Scanner;
 
 /**
@@ -92,5 +92,3 @@ public class SungJukV4 {
         }
     }
 }//class
-
-

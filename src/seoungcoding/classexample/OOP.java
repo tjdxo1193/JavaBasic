@@ -1,4 +1,4 @@
-package seoungcoding;
+package seoungcoding.classexample;
 
 //객체 지향 프로그래밍 개요
 //모든 데이터를 객처로 취급하여 소프트 웨어를 개발하는 방식

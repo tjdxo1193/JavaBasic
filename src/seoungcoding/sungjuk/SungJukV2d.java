@@ -1,4 +1,4 @@
-package seoungcoding;
+package seoungcoding.sungjuk;
 
 import java.util.Scanner;
 

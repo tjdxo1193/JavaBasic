@@ -1,4 +1,4 @@
-package seoungcoding;
+package seoungcoding.classexample;
 
 public class Department {
     String dep_name;
