@@ -23,8 +23,8 @@ import java.util.Scanner;
 public class SungJukV6Main {
     public static void main(String[] args) {
 
-        MidSungJuk mid = new MidSungJuk();
-        FinalSungJuk fin = new FinalSungJuk();
+        MidSungJuk2 mid = new MidSungJuk2();
+        FinalSungJuk2 fin = new FinalSungJuk2();
 
         mid.readSungJuk();
         mid.computeSungJuk();
