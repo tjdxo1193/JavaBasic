@@ -13,21 +13,30 @@ public class OOPCasting {
         m1.attack();
         f1.attack();
 
-        Unit m2 = new Marine();
+        Unit unit = new Marine();
         //Marine 객체는 자동으로 Unit객체로 형변환
         //이처럼 상속관계에 있는 클래스간의 객체 생성시
         //자식클래스타입의 객체를 부모클래스타입의 객체로
         //선언하는 경우 업캐스팅upcasting이라 함
 
-        m2.attack();
+        unit.attack();
 
-        Firebat f2 = (Firebat) new Unit();
+        //Marine m3 = (Marine) new Unit();
         //Unit 객체를 Firebat 객체로 형변환하려면
         //명시적 형변환 필요
         //이처럼 상속관계에 있는 클래스간의 객체 생성시
         //부모클래스타입의 객체를 자식클래스타입의 객체로
         //선언하는 경우 다운캐스팅downcasting 이라함
-        f2.attack();
+        //단, 컴파일시에는 오류가 나지 않지만
+        //실행시 오류 발생!
+        //m3.attack();
+
+        Marine m3 = (Marine) unit;
+        //Unit 객체변수를 Marine 객체를 다운캐스팅
+        //실행에 아무 문제 없음
+        //=> unit변수는 Marin 객체를 unit객체로 만든것
+        //따라서 , Marine객체로의 형변환이 가능
+        m3.attack();
     }
 }
 
@@ -41,6 +50,7 @@ class Unit {
 }
 
 class Marine extends Unit {
+    protected int hp = 50;
     @Override
     public void attack(){
         System.out.println("해병대가 공격중...");
