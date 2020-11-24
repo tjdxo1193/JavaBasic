@@ -1,5 +1,4 @@
-package seoungcoding;
-import javafx.util.converter.PercentageStringConverter;
+package seoungcoding.Day1123;
 
 import javax.swing.*;
 

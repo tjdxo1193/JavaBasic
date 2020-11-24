@@ -1,4 +1,4 @@
-package seoungcoding;
+package seoungcoding.Day1123;
 //인터페이스
 //추상메서드와 상수만로 구성된 특수한 클래스
 //어떤 클래스를 만들때 추상메서드를 통해

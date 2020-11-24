@@ -1,4 +1,4 @@
-package seoungcoding;
+package seoungcoding.Day1123;
 //클래스 종류
 //VO/DTO : ValueObject, Data Transfer, Object
 // 계층간 데이터교환을 위한자바 빈즈를 의미

@@ -1,4 +1,4 @@
-package seoungcoding;
+package seoungcoding.Day1123;
 //메서드 재정의 override
 //객체지향 중요 3대개념중 다형성에 해당
 //상속관계에 있는 상위클래스의 메서드를

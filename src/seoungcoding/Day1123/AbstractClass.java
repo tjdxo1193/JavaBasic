@@ -1,4 +1,4 @@
-package seoungcoding;
+package seoungcoding.Day1123;
 // 추상 클래스
 // 추상 메서드를 포함하는 클래스
 // 추상메서드 : 메서드의 선언부만 있고, 몸체가 없는 메서드

@@ -1,4 +1,4 @@
-package seoungcoding;
+package seoungcoding.Day1123;
 
 public class Overloading {
     public static void main(String[] args) {
