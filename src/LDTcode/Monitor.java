@@ -174,13 +174,13 @@ public class Monitor  {
 		try {
 			img1 = ImageIO.read(new File("D:\\JAVA_LAB\\introBackground.jpg"));
 		} catch(IOException e) {
-			JOptionPane.showMessageDialog(null, "�̹��� �ҷ����� ����");
+			JOptionPane.showMessageDialog(null, "이미지 불러오기 실패");
 			System.exit(0);
 		}
 		try {
 			img2 = ImageIO.read(new File("D:\\JAVA_LAB\\PlayBackground.jpg"));
 		} catch(IOException e) {
-			JOptionPane.showMessageDialog(null, "�̹��� �ҷ����� ����");
+			JOptionPane.showMessageDialog(null, "이미지 불러오기 실패");
 			System.exit(0);
 		}
 		
@@ -216,10 +216,10 @@ public class Monitor  {
 				BackButton.setVisible(false);
 				CompleteButton.setVisible(false);
 				/*
-				if(MyChampPick == "����") {
+				if(MyChampPick == "가렌") {
 					
 				}
-				if else( MyChamPick == "����") {
+				if else( MyChamPick == "가렌") {
 					
 				}
 				*/
