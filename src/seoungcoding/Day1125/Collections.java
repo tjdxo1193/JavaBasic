@@ -9,7 +9,7 @@ package seoungcoding.Day1125;
 
 import java.util.ArrayList;
 
-public class Collection {
+public class Collections {
     public static void main(String[] args) {
         Object[] zoo = new Object[10];
 
@@ -71,7 +71,6 @@ public class Collection {
         zoo4.add(new Lion());
 
         l1 = zoo4.get(0);
-
     }
 }
 
