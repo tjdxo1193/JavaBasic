@@ -1,6 +1,10 @@
-package Problem;
+package ProgrammersProblem;
+
+import java.util.Arrays;
+import java.util.Collections;
 
 /**
+ * Programers
  * 0 또는 양의 정수가 주어졌을 때, 정수를 이어 붙여 만들 수 있는 가장 큰 수를 알아내 주세요.
  *
  * 예를 들어, 주어진 정수가 [6, 10, 2]라면 [6102, 6210, 1062, 1026, 2610, 2106]를 만들 수 있고, 이중 가장 큰 수는 6210입니다.
@@ -12,9 +16,24 @@ package Problem;
  * numbers의 원소는 0 이상 1,000 이하입니다.
  * 정답이 너무 클 수 있으니 문자열로 바꾸어 return 합니다.
  */
-class Solution {
-    public int solution(int[] citations) {
-        int answer = 0;
+class Biggest {
+    public static void main(String[] args) {
+        int[] aa = {3,30,34,5,9};
+        System.out.println(solution(aa));
+    }
+    public static String solution(int[] citations) {
+        String answer = "";
+        String str[] = new String[citations.length];
+        for(int i = 0; i < citations.length; i++){
+            str[i] = String.valueOf(citations[i]);
+        }
+        Arrays.sort(str, Collections.reverseOrder());
+        int i = 0;
+
+        for (String data : str){
+            answer = answer.concat(str[i++]);
+        }
+
         return answer;
     }
 }

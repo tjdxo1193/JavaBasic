@@ -1,4 +1,4 @@
-package Problem;
+package ProgrammersProblem;
 
 public class Stack {
         protected int top;
