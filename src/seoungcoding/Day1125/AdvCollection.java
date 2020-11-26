@@ -3,6 +3,7 @@ package seoungcoding.Day1125;
 import java.util.*;
 import java.util.Collection;
 
+
 public class AdvCollection {
     // set : 집합
     // set 인터페이스를 구현한 컬렉션 클래스
