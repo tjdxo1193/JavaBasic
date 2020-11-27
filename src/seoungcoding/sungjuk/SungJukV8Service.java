@@ -18,6 +18,8 @@ public class SungJukV8Service extends SungJukV8GenericService {
     //List<>
     //입력받은 모든 성적데이터를 저장하는 동적배열 변수 선언
     List<SungJukVO> sjdata = new ArrayList<>();
+    //입력받은 성적데이터를 저장하는 변수
+    SungJukVO sj = null;
 
     @Override
     /**
@@ -40,7 +42,7 @@ public class SungJukV8Service extends SungJukV8GenericService {
         mat = sc.nextInt();
 
        //입력받은 성적데이터를 동적배열에 저장
-        SungJukVO sj = new SungJukVO(name, kor, eng, mat);
+        sj = new SungJukVO(name, kor, eng, mat);
 
         //총점, 평균, 학점으 계산하는 성적철
         computeSungJuk(sj);
@@ -99,7 +101,7 @@ public class SungJukV8Service extends SungJukV8GenericService {
 
         StringBuilder sb = new StringBuilder();
         sb.append("*ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ*\n")
-                .append("|  성적 처리프로그램 v4    |\n")
+                .append("|  성적 처리프로그램 v8    |\n")
                 .append("*ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ*\n")
                 .append("| 1. 성적 데이터 직접입력  |\n")
                 .append("| 2. 성적 데이터 간단조회  |\n")
