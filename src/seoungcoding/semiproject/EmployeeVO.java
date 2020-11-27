@@ -28,6 +28,8 @@ public class EmployeeVO {
     public EmployeeVO() {
     }
 
+
+
     public int getEmpno() {
         return empno;
     }

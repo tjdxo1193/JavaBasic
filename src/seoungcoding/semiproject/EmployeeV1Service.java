@@ -7,6 +7,8 @@ import java.util.Scanner;
 
 public class EmployeeV1Service extends EmployeeV1GenericService{
     List<EmployeeVO> Emdata = new ArrayList<>();
+    EmployeeVO em = null;
+
     @Override
     public void newEmployee() {
          int empno;
@@ -46,7 +48,7 @@ public class EmployeeV1Service extends EmployeeV1GenericService{
         System.out.print("부서번호를 입력하시오 :" );
         deptid = sc.nextInt();
         //입력받은 인사데이터를 동적배열에 저장
-        EmployeeVO em = new EmployeeVO(empno, fname, lname, email, phone, hdate, jobid, sal, comm, mgrid, deptid);
+        em = new EmployeeVO(empno, fname, lname, email, phone, hdate, jobid, sal, comm, mgrid, deptid);
 
         //처리된 인사데이터를 동적배열에 저장
         Emdata.add(em);
