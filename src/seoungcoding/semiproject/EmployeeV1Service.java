@@ -181,16 +181,16 @@ public class EmployeeV1Service extends EmployeeV1GenericService{
     public void displayMenu(){
 
         StringBuilder sb = new StringBuilder();
-        sb.append("*ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ*\n")
+        sb.append("*ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ*\n")
                 .append("|  인사관리 프로그램v1 |\n")
-                .append("*ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ*\n")
+                .append("*ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ*\n")
                 .append("|  1. 인사 정보 입력  |\n")
                 .append("|  2. 인사 정보 조회  |\n")
                 .append("|  3. 정보 상세 조회  |\n")
                 .append("|  4. 인사 정보 수정  |\n")
                 .append("|  5. 인사 정보 삭제  |\n")
                 .append("|  0. 프로 그램 종료  |\n")
-                .append("*ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ*\n")
+                .append("*ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ*\n")
                 .append("원하는 작업[1,2,3,4,5,0]:");
         System.out.print(sb);
     }
