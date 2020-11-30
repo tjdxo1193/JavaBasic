@@ -46,9 +46,110 @@ package ProgrammersProblem;
 
 
 public class FunDel {
-        public int[] solution(int[] progresses, int[] speeds) {
-            int[] answer = {};
 
-            return answer;
+    public static void main(String[] args) {
+        int[] pro = {95, 90, 99, 99, 80, 99};
+        int[] spe = {1, 1, 1, 1, 1, 1};
+    }
+
+    public static int[] solution(int[] progresses, int[] speeds) {
+        //변수들 선언
+        int[] answer = new int[progresses.length];
+        int[] proceed = new int[progresses.length];
+        boolean isFinish = true;
+        int flagFir= 0;
+        boolean flag = false;
+        int re_finish = 0;
+        int re_index =0;
+        //스택 두개 생성
+        UserArrayStack arrstack_p = new UserArrayStack(progresses.length);
+        UserArrayStack arrstack_s = new UserArrayStack(speeds.length);
+        //스택에 값을 거꾸로 넣기
+        for(int i =1; i <= progresses.length; i++){
+            arrstack_p.push(progresses[progresses.length-i]);
+            arrstack_s.push(speeds[speeds.length-i]);
         }
+        //스택에 잘 들어 갔는지 점검
+        if(arrstack_p.empty()){
+            System.out.println("스택이 비었습니다. 프로그램, 논리적 오류!!");
+        }
+        //배열 초기화
+        for (int i = 0; i <proceed.length; i++){
+            proceed[i] = progresses[i];
+            answer[i] = 0;
+        }
+        //데이터 처리구간
+        while(!arrstack_p.empty()){
+            while (flagFir < proceed.length) {
+                if (proceed[flagFir] >= 100) {
+                    arrstack_p.pop();
+                    arrstack_s.pop();
+                    flagFir++;
+                    re_finish++;
+                    flag = true;
+                    if (flagFir == proceed.length)
+                        break;
+                    //System.out.println("수행중");
+                } else {
+                   // System.out.println("빠져나감");
+                    break;
+                }
+            }
+            if (flag) {//오늘 배포 가능한 기능수 답에 대입!
+                answer[re_index++] = re_finish;
+                flag = false;
+            }
+            if (flagFir == proceed.length)
+                break;
+            re_finish = 0; //오늘 배포 가능한 기능 수 => 초기화
+            for (int i = flagFir; i < proceed.length; i++){//하루 치 update 하루가 끝나고 업데이트됨.
+                proceed[i] = proceed[i] + speeds[i];
+            }
+        }
+        int result[] = new int[re_index];
+        for (int i = 0; i < re_index; i++ )
+            result[i] = answer[i];
+        return result;
+    }
+
 }
+
+class UserArrayStack {
+
+    int top;
+    int [] stack;
+    int size;
+
+    public UserArrayStack(int size) {
+        this.size = size; //
+        stack = new int[size];
+        top = -1; // top 의 값 초기화
+    }
+
+    public void push(int item) {
+        stack[++top] = item;
+       // System.out.println(stack[top] + " push!");
+    }
+
+    public void peek() {
+       // System.out.println(stack[top] + " peek!");
+    }
+
+    public void pop() {
+       // System.out.println(stack[top] + " pop!");
+        stack[top--] = 0;
+    }
+
+    public int search(int item) {
+        for (int i = 0; i <= top; i++) { // for 문은 top 만큼
+            if (stack[i] == item)
+                return (top - i) + 1; // top - 탐색한 배열의 인덱스, 배열 이므로 +1 추가
+        }
+        return -1;
+    }
+
+    public boolean empty() {
+        return size == 0;
+    }
+}
+
