@@ -65,7 +65,7 @@ public class EmployeeV1Service extends EmployeeV1GenericService{
             System.out.printf(fmt, em.getEmpno(), em.getLname(), em.getEmail(), em.getJobid(), em.getMgrid(), em.getDeptid());
         }
     }
-
+    @Override
     public void readOneEmployee() {//(사번으로 조회, 모두다)
         String fmt = "직원 번호: %d ,직원 이름: %s ,직원 성: %s ,이메일: %s ,전화번호: %s ,입사 날짜: %s \n," +
                 "직책: %s ,연봉: %d , 커미션: %.2f ,상사 번호: %d ,부서 번호: %d \n";
