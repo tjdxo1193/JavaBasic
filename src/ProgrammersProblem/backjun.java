@@ -1,20 +1,23 @@
 package ProgrammersProblem;
 
+//첫째 줄에 (A+B)%C, 둘째 줄에 ((A%C) + (B%C))%C, 셋째 줄에 (A×B)%C, 넷째 줄에 ((A%C) × (B%C))%C를 출력한다.
+//첫째 줄에 (A+B)%C, 둘째 줄에 ((A%C) + (B%C))%C, 셋째 줄에 (A×B)%C, 넷째 줄에 ((A%C) × (B%C))%C를 출력한다.
 import java.util.Scanner;
-class Main {
+
+class Main{
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int input_first = sc.nextInt();
-        int input_second = sc.nextInt();
+        String[] NX = new String[2];
+        NX = sc.nextLine().split(" ");
 
-        int num_three = input_first * (input_second%10);
-        int num_four = input_first * ((input_second-input_second%10)%100/10);
-        int num_five = input_first * ((input_second/100));
+        String[] input = new String[Integer.parseInt(NX[0])];
+        input = sc.nextLine().split(" ");
 
-        int num_six = num_five*100+(num_four*10)+num_three;
-
-        String fmt = String.format("%d\n%d\n%d\n%d",num_three,num_four,num_five,num_six);
-        System.out.println(fmt);
+        for (int i = 0; i < input.length; i++){
+            if (Integer.parseInt(NX[1]) > Integer.parseInt(input[i])){
+                System.out.print( input[i] + " ");
+            }
+        }
     }
-
 }
