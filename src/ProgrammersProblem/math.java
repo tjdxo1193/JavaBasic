@@ -3,7 +3,7 @@ package ProgrammersProblem;
 import java.util.Scanner;
 import java.util.stream.Stream;
 
-class Main1 {
+public class math {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         boolean re = true;

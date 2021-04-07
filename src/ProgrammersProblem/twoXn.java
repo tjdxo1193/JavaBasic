@@ -18,5 +18,5 @@ public class twoXn {
             }
             System.out.println(d[num]);
 
-}
+    }
 }
